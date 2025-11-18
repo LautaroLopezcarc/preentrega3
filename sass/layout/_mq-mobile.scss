@@ -1,0 +1,63 @@
+@use "../utilidades/variables" as*;
+
+@use "../utilidades/mixin" as*;
+
+
+@media screen and (max-width: 768px) {
+
+  /* HEADER */
+  header {
+    @include flex-center(column); // cambia a columna
+
+    .navbar {
+      width: 100%;
+    }
+  }
+
+  /* SECCIONES */
+  .section-uno,
+  .section-dos {
+    @include flex-center(column, center, center);
+    text-align: center;
+    gap: 1rem;
+
+    img {
+      width: 50vh;
+    }
+
+    p {
+      width: 90%;
+    }
+  }
+
+  /* TARJETAS */
+  .contenedor-tarjeta {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 10px;
+
+    .tarjeta {
+      padding: 1rem;
+
+      img {
+        width: 40px;
+      }
+    }
+  }
+
+  /* FOOTER */
+  footer {
+    @include flex-center(column, center, center);
+    text-align: center;
+    gap: 1rem;
+
+    .redes {
+      text-align: center;
+    }
+
+    ul li {
+      @include flex-center(row, center, center);
+    }
+  }
+}
+
