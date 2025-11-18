@@ -1,0 +1,65 @@
+@use "../utilidades/variables" as*;
+
+@use "../utilidades/mixin" as*;
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+  header {
+    @include flex-center(row, space-between, center);
+  }
+
+  .navbar {
+    width: 80%;
+  }
+
+  .section-uno{
+    @include flex-center(row, center, center);
+    gap: 2rem;
+    text-align: left;
+    padding: 0,5rem;   // ⭐ Añadido: espacio lateral
+  }
+ .section-dos{
+        @include flex-center(row-reverse, space-between, center);
+        gap: 2.5rem;
+        padding: 0 2rem;
+        text-align: left
+  }
+  .section-uno p, .section-dos p {
+     max-width: 45%;        // evita párrafos largos y estirados
+    line-height: 1.7;      // lectura más cómoda
+    font-size: 1.1rem;
+  }
+
+  .section-uno img, .section-dos img {
+    width: 30vh;
+  }
+
+ .contenedor-tarjeta {
+    width: 90%;
+    margin: 3rem auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;       // más separación entre tarjetas
+    justify-items: center;
+  }
+
+  .tarjeta {
+    max-width: 260px;  // tamaño equilibrado
+    padding: 1.5rem;
+    border-radius: 15px;
+  }
+
+  .tarjeta img {
+    width: 45px; // tamaño equilibrado para tablet
+    margin-bottom: 1rem;
+  }
+
+  .tarjeta h3 {
+    font-size: 1.8rem;
+  }
+
+  .tarjeta p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+}

@@ -1,0 +1,207 @@
+//variables
+@use "../utilidades/variables" as*;
+
+//mixin
+@use "../utilidades/mixin" as*;
+
+
+
+body {
+    background-color: $fondo-body;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+header{
+    @include flex-center(row, space-between);
+    background-color: $color-primario;
+    nav ul{
+        list-style: none;
+        @include flex-center(row, null, center);
+        gap: 1rem;
+       
+        margin-right: 1rem;
+
+    }
+    nav ul li a{
+        text-decoration: none;
+        font-weight: 700;
+        border-radius: 3px;
+        padding: 5px;
+        color:$color-texto;
+    }
+    nav ul li a:hover{
+        transition: all 0.3s ease;
+        transform: scale(1.053);
+        color: white;
+        background-color:$color-primario-oscuro;
+        padding: 8px 15px;
+        border-radius: 10px;
+    }
+    nav form {
+        margin-left: 1rem;
+    }
+    a:visited {
+        color: rgb(8, 8, 8);
+    }
+    .btn-outline-success {
+        color: white;
+        border-color: $color-secundario;
+        background-color: $color-secundario;
+        transition: 0.3s;
+    }
+}
+.logo {
+    margin-left: 1rem;
+}
+
+main{
+    flex: 1; 
+    text-align: center;
+
+    h1 h2{
+        font-size: 2.3rem;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .section-uno {
+        @include flex-center(center,space-between, center);
+        margin: 3rem;
+        
+        
+    }
+    .section-dos {
+       @include flex-center(center,space-between, center);
+    }
+    section .img-uno, .img-dos {
+        border-radius: 20px;
+    }
+    p{
+        line-height: 2;
+        width: 60%;
+        text-align: justify;
+        font-size: 1.3rem;
+    }
+
+    .contenedor-tarjeta{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+        margin: 3rem auto;
+        justify-items: center;
+    }
+    .tarjeta{
+        width: 90%;
+        max-width: 300px;
+        border: none;
+        border-radius: 15px;
+        padding: 1.5rem;
+        background-color: $fondo-tarjeta;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .tarjeta img{
+        width: 20%;
+        margin-bottom: 0.5rem;
+    }
+    .tarjeta:hover{
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+    }
+    .contenedor-tarjeta h3 {
+        font-size: 3rem;
+    }
+    .contenedor-tarjeta p {
+        font-size: 1.3rem;
+    }
+}
+
+footer{
+    @include flex-center(row, space-between, center);
+    text-align: right;
+    background-color: $fondo-tarjeta;
+    padding: 1rem;
+    ul{
+        margin: 0;
+        padding: 0;
+    }
+    ul li {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        font-size: 0.9rem;
+    }
+    img{
+        width: 30px;
+    }
+    h3{
+        font-size: 1.3rem;
+    }
+}
+
+//formulario
+.form-contacto-container{
+    margin-top: 2rem; 
+    
+}
+section .tabla{
+    @include flex-center(column);
+    gap: 1.5rem;
+    div {
+        display: flex;
+        flex-direction: column;
+       width: 80%;
+    }
+    input, textarea {
+        border-radius: 5px;
+        margin-left: 1rem;
+        padding: 1rem;
+    }
+
+    input[type="submit"] {
+        width: 10%;
+        @include boton(#007bff);
+        height: 40px;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+}
+
+//quienes somos
+
+.main-quienes-somos {
+    @include flex-center(column);
+    text-align: center;
+
+    .section-text-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+    }
+}
+
+.section-img {
+    @include flex-center(row, center, center);
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin: 2rem;
+
+    img {
+        width: 100%;
+        max-width: 600px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        transition: transform 0.3s ease; 
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+}
+

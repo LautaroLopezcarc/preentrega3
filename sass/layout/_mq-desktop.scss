@@ -1,0 +1,56 @@
+@use "../utilidades/variables" as*;
+
+@use "../utilidades/mixin" as*;
+
+
+@media screen and (min-width: 1025px) {
+
+  header {
+    @include flex-center(row, space-between, center);
+    padding: 1rem 3rem;
+  }
+
+  .navbar {
+    width: 60%;
+  }
+
+  .section-uno {
+    @include flex-center(row, space-between, center);
+    gap: 4rem;              // ⭐ más espacio entre imagen y texto
+    padding: 0 4rem;        // ⭐ separa del borde de la pantalla
+    text-align: left;
+  }
+  .section-dos{
+        @include flex-center(row-reverse, space-between, center);
+        gap: 3rem;
+        padding: 0 4rem;
+        text-align: left;
+  }
+
+  .section-uno img, .section-dos img {
+    width: 55vw;            // ⭐ mucho más chico (antes 45vh)
+    max-width: 500px;       // ⭐ límite para monitores grandes
+    height: auto;
+  }
+
+  .section-uno p, .section-dos p {
+    max-width: 50%;         // ⭐ evita que toque la imagen
+    line-height: 1.7;       // mejora lectura
+  }
+
+  .contenedor-tarjeta {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin: 3rem 5rem;
+  }
+
+  .tarjeta img {
+    width: 60px;
+  }
+
+  footer {
+    @include flex-center(row, space-between, center);
+    padding: 2rem 4rem;
+  }
+}
+
