@@ -5,9 +5,9 @@
 
 @media screen and (max-width: 768px) {
 
-  /* HEADER */
+  
   header {
-    @include flex-center(column); // cambia a columna
+    @include flex-center(column); 
 
     .navbar {
       width: 100%;

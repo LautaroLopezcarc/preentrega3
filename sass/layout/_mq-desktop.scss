@@ -28,14 +28,14 @@
   }
 
   .section-uno img, .section-dos img {
-    width: 55vw;            // ⭐ mucho más chico (antes 45vh)
-    max-width: 500px;       // ⭐ límite para monitores grandes
+    width: 55vw;            
+    max-width: 500px;       
     height: auto;
   }
 
   .section-uno p, .section-dos p {
-    max-width: 50%;         // ⭐ evita que toque la imagen
-    line-height: 1.7;       // mejora lectura
+    max-width: 50%;         
+    line-height: 1.7;      
   }
 
   .contenedor-tarjeta {

@@ -223,7 +223,6 @@ section .tabla input[type=submit]:hover {
 }
 
 @media screen and (max-width: 768px) {
-  /* HEADER */
   header {
     display: flex;
     flex-direction: column;
