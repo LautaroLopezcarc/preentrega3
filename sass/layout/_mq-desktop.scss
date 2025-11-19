@@ -16,8 +16,8 @@
 
   .section-uno {
     @include flex-center(row, space-between, center);
-    gap: 4rem;              // ⭐ más espacio entre imagen y texto
-    padding: 0 4rem;        // ⭐ separa del borde de la pantalla
+    gap: 4rem;              
+    padding: 0 4rem;        
     text-align: left;
   }
   .section-dos{
