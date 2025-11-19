@@ -77,6 +77,8 @@ main{
     }
     .section-dos {
        @include flex-center(center,space-between, center);
+        margin: 3rem;
+       
     }
     section .img-uno, .img-dos {
         border-radius: 20px;
@@ -127,8 +129,8 @@ footer{
     background-color: $fondo-tarjeta;
     padding: 1rem;
     ul{
-        margin: 0;
-        padding: 0;
+        
+        padding: 1rem;
     }
     ul li {
         list-style: none;
@@ -142,6 +144,10 @@ footer{
     }
     h3{
         font-size: 1.3rem;
+    }
+    .redes{
+       
+        padding:1rem;
     }
 }
 

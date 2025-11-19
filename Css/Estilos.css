@@ -89,6 +89,7 @@ main .section-dos {
   justify-content: space-between;
   align-items: center;
   padding: 0 !important;
+  margin: 3rem;
 }
 main section .img-uno, main .img-dos {
   border-radius: 20px;
@@ -142,8 +143,7 @@ footer {
   padding: 1rem;
 }
 footer ul {
-  margin: 0;
-  padding: 0;
+  padding: 1rem;
 }
 footer ul li {
   list-style: none;
@@ -157,6 +157,9 @@ footer img {
 }
 footer h3 {
   font-size: 1.3rem;
+}
+footer .redes {
+  padding: 1rem;
 }
 
 .form-contacto-container {
