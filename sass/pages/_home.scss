@@ -15,11 +15,15 @@ body {
 header{
     @include flex-center(row, space-between);
     background-color: $color-primario;
+   
+      
+    
     nav ul{
         list-style: none;
         @include flex-center(row, null, center);
         gap: 1rem;
-       
+        justify-content: flex-end; 
+        width: 100%; 
         margin-right: 1rem;
 
     }
