@@ -91,7 +91,7 @@ main .section-dos {
   padding: 0 !important;
   margin: 3rem;
 }
-main section .img-uno, main .img-dos {
+main .section-uno .img-uno, main .section-dos .img-dos {
   border-radius: 20px;
 }
 main p {
@@ -341,7 +341,7 @@ section .tabla input[type=submit]:hover {
     width: 90%;
     margin: 3rem auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     justify-items: center;
   }
